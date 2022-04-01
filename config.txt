@@ -1,0 +1,33 @@
+Instalar Tsc local
+    $ sudo npm i -g typescript     
+intro iniciar el proyecto
+    $ npm init -y
+
+1. configurar tsc
+    $ tsc --int
+2. configurar en tsconfig.json
+    {
+        "outDir": "./dist", 
+        "target": "es5",    
+        "module": "commonjs",   
+        "sourceMap": true,  
+        "esModuleInterop": true,        
+        "forceConsistentCasingInFileNames": true,   
+        "strict": true,     
+        "moduleResolution": "node",                       
+    }
+3. install npm i tslint --save-dev
+4. install npm i typescript --save-dev  
+5. inicializar tslint 
+    $ ./node_modules/.bin/tslint --init
+    {
+        "defaultSeverity": "error",
+        "extends": ["tslint:recommended"],
+        "jsRules": {},
+        "rules": {
+            "no-console": false
+        },
+        "rulesDirectory": []
+    }
+6. para que Tsc compile automaticamente 
+    tsc --watch
