@@ -31,3 +31,8 @@ intro iniciar el proyecto
     }
 6. para que Tsc compile automaticamente 
     tsc --watch
+
+
+
++Para ignorar errores inesperados
+// @ts-ignore to ignore the type checking errors on the next line in a TypeScript file. If you use a linter, you might have to add a comment to also suppress linting errors when using ts-ignore - // eslint-disable-next-line @typescript-eslint/ban-ts-comment
