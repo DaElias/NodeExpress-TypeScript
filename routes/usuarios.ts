@@ -31,7 +31,14 @@ router.post(
   ],
   postUsuario
 );
-router.put("/:id", [validarCampos], putUsuario);
+router.put(
+  "/:id",
+  [
+    ValidarUUID,
+    validarCampos,
+  ],
+  putUsuario
+);
 router.delete("/:id", [validarCampos], deletetUsuario);
 
 export default router;
